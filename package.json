@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://ThulasiVeeraragavan.github.io/portfolio",
+  "homepage": "https://Piyon85Raj.github.io/Portfolio_PiyonRaj",
   "private": true,
   "dependencies": {
     "@react-pdf/renderer": "^2.2.0",
@@ -50,6 +50,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.3.0"
   }
 }
