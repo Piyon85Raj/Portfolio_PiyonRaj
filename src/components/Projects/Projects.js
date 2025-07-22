@@ -10,6 +10,10 @@ import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/17.jpg";
 import Forklift from "../../Assets/18.png";
 import ClassEnder from "../../Assets/19.png";
+import BirdHunt from "../../Assets/22.png";
+import EscapeDot from "../../Assets/20.png";
+import PrimaryKids from "../../Assets/21.png";
+import DragonMario from "../../Assets/23.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -70,6 +74,46 @@ function Projects() {
               title="Class Ender"
               description="This is a mobile game I designed and developed using Unity for the Android platform. The gameplay showcases smooth controls, an intuitive UI, and engaging mechanics tailored for casual mobile users. From conceptualization to publishing, I handled all aspects including game logic, UI design, animations, and testing."
             ghLink="https://youtube.com/shorts/0H0zlmUQ0m8?si=lEzlWS4Ph3rkaHgF"
+           />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={BirdHunt}
+              isBlog={false}
+              title="Bird Hunting"
+              description="Bird Hunting is a 2D shooting game created in Unity for the Windows platform. The player controls a hunter standing on a beach, shooting upward at birds flying across the sky. Birds are spawned randomly from three positions using prefabs from the 2DBirds_Pack3 asset pack. I implemented horizontal movement, shooting mechanics, collision detection, and scoring logic. This game is built with future multiplayer integration in mind."
+            ghLink="https://youtu.be/3ls46D_GD4c"
+           />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={DragonMario}
+              isBlog={false}
+              title="Dragon Mario"
+              description="Dragon Mario is a 2D side-scrolling platformer game developed in Unity. The player controls a character using A/D or arrow keys to move and spacebar to jump. I created and animated different running and jumping sprite states to match the gameplay. The game focuses on responsive controls and smooth animations, offering a nostalgic side-scroller experience with modern polish."
+            ghLink="https://youtu.be/FlO7nna-LUw"
+           />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={EscapeDot}
+              isBlog={false}
+              title="Escape Dot"
+              description="Escape Dot is a minimalist 2D puzzle game developed for Android using Unity. The player starts from the bottom-left of the screen and must navigate to the top-right escape point by swiping in different directions. The gameplay includes maze navigation, interactive triggers like a valve key to unlock blocks, and level progression. I designed the logic, movement, and obstacle interactions for a smooth and engaging mobile puzzle experience."
+            ghLink="https://youtube.com/shorts/7WlxAN0TIwY"
+           />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={PrimaryKids}
+              isBlog={false}
+              title="Primary Kids"
+              description="This is an educational 2D Android app I developed using Unity, aimed at helping kids learn letters, numbers, shapes, and common object names with both text and audio. I designed the UI using Photoshop and implemented interactive learning with touch input and speaker buttons for pronunciation. The app includes a dictation mode that generates random letters or numbers for recall practice and a drawing page where kids can freely write or sketch using their finger or mouse. Published under Omega Studios, the app is designed for a fun and child-friendly learning experience."
+            ghLink="https://youtube.com/shorts/wj6yz2vE-5A"
            />
           </Col>
 
