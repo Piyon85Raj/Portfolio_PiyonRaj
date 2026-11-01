@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/PIYONRAJ_Resume.pdf";
+import pdf from "../../Assets/PIYONRAJ_Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -20,47 +21,46 @@ function ResumeNew() {
       <Container fluid className="resume-section">
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
-         {/* <Button
+          <Button
             variant="primary"
             href={pdf}
+            download="PiyonRaj_Resume.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
             &nbsp;Download CV
-          </Button>*/}
+          </Button>
         </Row>
 
         <Row className="resume">
           <Document file={pdf} className="d-flex justify-content-center">
-              <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} /> 
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
           <Document file={pdf} className="d-flex justify-content-center">
-              <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6} /> 
+            <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
           <Document file={pdf} className="d-flex justify-content-center">
-              <Page pageNumber={3} scale={width > 786 ? 1.7 : 0.6} /> 
+            <Page pageNumber={3} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
           <Document file={pdf} className="d-flex justify-content-center">
-              <Page pageNumber={4} scale={width > 786 ? 1.7 : 0.6} /> 
+            <Page pageNumber={4} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
         </Row>
-       
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
-         { <Button>
-           <a
-             href={pdf}
-              download="PiyonRaj_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-              style={{ maxWidth: "250px", textAlign: "center" }}>
-               <AiOutlineDownload />
-                &nbsp;Download CV
-          </a>
-
-          </Button>}
+          <Button
+            variant="primary"
+            href={pdf}
+            download="PiyonRaj_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ maxWidth: "250px", textAlign: "center" }}
+          >
+            <AiOutlineDownload />
+            &nbsp;Download CV
+          </Button>
         </Row>
       </Container>
     </div>

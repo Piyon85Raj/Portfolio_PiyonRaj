@@ -35,14 +35,37 @@ function Particle() {
         },
         interactivity: {
           events: {
+            onHover: {
+              enable: true,
+              mode: "grab",
+            },
+            onhover: {
+              enable: true,
+              mode: "grab",
+            },
+            onClick: {
+              enable: true,
+              mode: "push",
+            },
             onclick: {
               enable: true,
               mode: "push",
             },
           },
           modes: {
+            grab: {
+              distance: 140,
+              links: {
+                opacity: 0.3,
+                color: "#c770f0",
+              },
+              line_linked: {
+                opacity: 0.3,
+                color: "#c770f0",
+              },
+            },
             push: {
-              particles_nb: 1,
+              particles_nb: 3,
             },
           },
         },

@@ -6,11 +6,12 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import CustomCursor from "./components/CustomCursor";
 import {
   HashRouter as Router, // Use HashRouter instead of BrowserRouter
   Route,
   Routes,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <Router>
+      <CustomCursor />
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
